@@ -1,0 +1,21 @@
+name: github.com/opspec-pkgs/npm.pack
+description: runs npm pack on a directory
+inputs:
+  pkgDir:
+    dir:
+      description: npm package directory
+      default: .
+outputs:
+  pkgTarball:
+    file:
+      description: npm package tarball
+version: 1.0.0
+run:
+  container:
+    cmd: [ /cmd.sh ]
+    files:
+      /cmd.sh:
+      /pkgTarball: pkgTarball
+    dirs:
+      /pkgDir: pkgDir
+    image: { ref: 'node:8.1.0-alpine' }
