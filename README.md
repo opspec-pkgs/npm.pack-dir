@@ -6,30 +6,27 @@ runs npm pack on a directory
 
 # Example usage
 
-> note: in examples, VERSION represents a version of the npm.pack pkg
-
 ## install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/npm.pack#VERSION
+opctl pkg install github.com/opspec-pkgs/npm.pack#1.0.0
 ```
 
 ## run
 
 ```
-opctl run github.com/opspec-pkgs/npm.pack#VERSION
+opctl run github.com/opspec-pkgs/npm.pack#1.0.0
 ```
 
 ## compose
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/npm.pack#VERSION }
+  pkg: { ref: github.com/opspec-pkgs/npm.pack#1.0.0 }
   inputs: 
-    pkgDotJson:
-    version:
+    pkgDir:
   outputs: 
-    pkgDotJson:
+    pkgTarball:
 ```
 
 # Support
