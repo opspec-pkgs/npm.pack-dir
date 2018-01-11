@@ -9,20 +9,20 @@ runs npm pack on a directory
 ## install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/npm.pack#1.0.0
+opctl pkg install github.com/opspec-pkgs/npm.pack-dir#1.0.0
 ```
 
 ## run
 
 ```
-opctl run github.com/opspec-pkgs/npm.pack#1.0.0
+opctl run github.com/opspec-pkgs/npm.pack-dir#1.0.0
 ```
 
 ## compose
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/npm.pack#1.0.0 }
+  pkg: { ref: github.com/opspec-pkgs/npm.pack-dir#1.0.0 }
   inputs: 
     pkgDir:
   outputs: 
