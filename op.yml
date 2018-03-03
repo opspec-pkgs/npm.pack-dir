@@ -1,4 +1,4 @@
-name: github.com/opspec-pkgs/npm.pack
+name: github.com/opspec-pkgs/npm.pack-dir
 description: runs npm pack on a directory
 inputs:
   pkgDir:
@@ -15,7 +15,7 @@ run:
     cmd: [ /cmd.sh ]
     files:
       /cmd.sh:
-      /pkgTarball: pkgTarball
+      /pkgTarball: $(pkgTarball)
     dirs:
-      /pkgDir: pkgDir
-    image: { ref: 'node:8.1.0-alpine' }
+      /pkgDir: $(pkgDir)
+    image: { ref: 'node:9.5.0-alpine' }
