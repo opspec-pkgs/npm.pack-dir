@@ -1,31 +1,38 @@
-[![Build Status](https://travis-ci.org/opspec-pkgs/npm.pack-dir.svg?branch=master)](https://travis-ci.org/opspec-pkgs/npm.pack-dir)
+[![Build Status](https://travis-ci.org/opspec-pkgs/npm.pack.svg?branch=master)](https://travis-ci.org/opspec-pkgs/npm.pack)
+
+<img src="icon.svg" alt="icon" height="100px">
 
 # Problem statement
 
 runs npm pack on a directory
 
+# Format
+
+this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
+
 # Example usage
 
-## install
+## Install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/npm.pack-dir#1.0.0
+opctl pkg install github.com/opspec-pkgs/npm.pack#1.0.0
 ```
 
-## run
+## Run
 
 ```
-opctl run github.com/opspec-pkgs/npm.pack-dir#1.0.0
+opctl run github.com/opspec-pkgs/npm.pack#1.0.0
 ```
 
-## compose
+## Compose
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/npm.pack-dir#1.0.0 }
-  inputs: 
+  pkg: { ref: github.com/opspec-pkgs/npm.pack#1.0.0 }
+  inputs:
+    # params w/ default
     pkgDir:
-  outputs: 
+  outputs:
     pkgTarball:
 ```
 
@@ -33,7 +40,8 @@ op:
 
 join us on
 [![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
-or [open an issue](https://github.com/opspec-pkgs/npm.pack/issues)
+or
+[open an issue](https://github.com/opspec-pkgs/npm.pack/issues)
 
 # Releases
 
